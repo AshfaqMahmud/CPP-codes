@@ -17,6 +17,28 @@ class Node{
     }
 };
 Node *head;
+
+
+
+//traversing LL
+void Traverse()
+{
+    Node *temp = new Node();
+    temp = head;
+    while(temp != NULL)
+    {
+        cout<<temp->data<<" ";
+        temp = temp->next;
+    }
+}
+//Insertions algorithm
+void firstInsert(int val)
+{
+    Node *node = new Node(val);
+    node->next = head;
+    head = node;
+}
+
 int main()
 {
     Node *temp = new Node();
@@ -44,12 +66,13 @@ int main()
     }
 
     //traverse the linkedlist
-    temp = head;
-    while(temp != NULL)
-    {
-        cout<<temp->data<<" ";
-        temp = temp->next;
-    }
+    Traverse();
 
+    //Insertions in LinkedList
+    cout<<"\nInsert in the first position: ";
+    int x;
+    cin>>x;
+    firstInsert(x);
+    Traverse();
     return 0;
 }
