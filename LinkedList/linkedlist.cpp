@@ -39,6 +39,20 @@ void firstInsert(int val)
     head = node;
 }
 
+void lastInsert(int val){
+    Node *node = new Node(val);
+    Node *temp = new Node();
+    temp = head;
+    while(temp->next != NULL)
+    {
+        //cout<<temp->data<<" ";
+        
+            temp = temp->next;  
+    }
+    temp->next = node;
+    
+}
+
 int main()
 {
     Node *temp = new Node();
@@ -72,7 +86,9 @@ int main()
     cout<<"\nInsert in the first position: ";
     int x;
     cin>>x;
-    firstInsert(x);
+    //firstInsert(x);
+    //Traverse();
+    lastInsert(x);
     Traverse();
     return 0;
 }
