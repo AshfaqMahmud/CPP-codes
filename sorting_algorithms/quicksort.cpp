@@ -19,17 +19,12 @@ int partition(int l, int h, vector<int> &arr)
         }while(arr[j]>pivot);
 
         if(i<j){
-            //swap using XOR
-            // arr[i] = arr[i] ^ arr[j];
-            // arr[j] = arr[i] ^ arr[j];
-            // arr[i] = arr[i] ^ arr[j];
+           
             swap(arr[i],arr[j]);
         }
     }
     swap(arr[l],arr[j]);
-    // arr[l] = arr[l] ^ arr[j];
-    // arr[j] = arr[l] ^ arr[j];
-    // arr[l] = arr[l] ^ arr[j];
+    
 
     return j;
 }
