@@ -25,6 +25,20 @@ node *_traverse(node *head)
     return tmp;
 }
 
+void _display(node *head)
+{
+    if (head == NULL)
+        return;
+
+    node *tmp = head;
+    printf("Printing node values...\n\t\tAddress\t\t\t\t\tValue\n");
+    while (tmp != NULL)
+    {
+        printf("\t\t%p\t\t\t%d\n", (void *)tmp, tmp->data);
+        tmp = tmp->next;
+    }
+}
+
 node *_create_node(uint32_t data)
 {
     node *newnode = malloc(sizeof(node));
@@ -55,19 +69,18 @@ void _last_insert(node *n_node)
     }
 }
 
-void _display(node *head)
+void _first_insert(node *n_node)
 {
-    if (head == NULL)
-        return;
-
-    node *tmp = head;
-    printf("Printing node values...\n\t\tAddress\t\t\t\t\tValue\n");
-    while (tmp != NULL)
-    {
-        printf("\t\t%p\t\t\t%d\n", (void *)tmp, tmp->data);
-        tmp = tmp->next;
-    }
+    
+    printf("Before first insert: ");
+    _display(head);
+    n_node->next = head;
+    head = n_node;
+    printf("\nAfter first insert: ");
+    _display(head);
 }
+
+
 
 int main()
 {
@@ -90,6 +103,7 @@ int main()
         head = head->next;
         free(temp);
     }
+    _first_insert(_create_node(rand()%5));
 
     return 0;
 }
