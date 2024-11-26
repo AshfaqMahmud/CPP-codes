@@ -38,7 +38,7 @@ int main()
                 "D4C2" starts with "D4", so the comparison will return a non-zero value, and it will not be printed.
 
         */
-    }
 
+    }
     return 0;
 }
