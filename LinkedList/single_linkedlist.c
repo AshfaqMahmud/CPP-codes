@@ -3,7 +3,6 @@
 #include <math.h>
 #include <stdlib.h>
 
-#pragma pack(1)
 struct node
 {
     uint32_t data;
@@ -37,7 +36,7 @@ node *_create_node(uint32_t data)
     return newnode;
 }
 
-void _insert(node *n_node)
+void _last_insert(node *n_node)
 {
     if (n_node == NULL)
         return;
@@ -73,13 +72,14 @@ void _display(node *head)
 int main()
 {
     uint32_t size;
+    printf("Currently size of node structure is: %d\n",sizeof(head));
     printf("How many nodes to be created? : ");
     scanf("%d", &size);
 
     while (size)
     {
         uint32_t x = rand() % size;
-        _insert(_create_node(x));
+        _last_insert(_create_node(x));
         size--;
     }
     _display(head);
