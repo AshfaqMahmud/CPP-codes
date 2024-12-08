@@ -6,7 +6,7 @@ void test_func(int v, int *p, int q[])
 	*p += 7;
 	q[1] += 8;
 
-        //printf("%d %d %d",v,*p,q[1]);
+        printf("%d %d %d",v,*p,q[1]);
 
 	return;
 }
