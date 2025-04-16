@@ -1,0 +1,40 @@
+# Compiled source files
+*.class
+*.pyc
+*.o
+*.out
+*.exe
+
+# Directories
+/node_modules/
+/dist/
+/build/
+/target/
+/__pycache__/
+
+# Logs and databases
+*.log
+*.sqlite
+
+# System files
+.DS_Store
+Thumbs.db
+
+# C++ specific
+*.obj
+*.pdb
+*.ilk
+*.lib
+*.dll
+
+# JavaScript specific
+*.env
+
+# Python specific
+*.pyo
+*.pyd
+
+# Java specific
+*.jar
+*.war
+*.ear
